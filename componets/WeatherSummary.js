@@ -1,10 +1,18 @@
-import { View, Text } from 'react-native'
+import { StyleSheet, View, Text, ScrollView } from 'react-native'
 import React from 'react'
 
 export default function WeatherSummary() {
   return (
     <View>
-      <Text>WeatherSummary</Text>
+      <Text style={styles.text}>WeatherSummary</Text>
     </View>
   )
-}
+};
+const styles = StyleSheet.create({
+ 
+
+  text: {
+    color: 'white',
+
+  }
+});
