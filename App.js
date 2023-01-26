@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     fontSize: 74
   },
   iconcontainer: {
-    flexDirection: 'row'
+    flexDirection: 'row',
+    justifyContent: 'space-around'
   }
 });
