@@ -8,6 +8,7 @@ export default function WeatherSummary() {
     <View style={styles.heroContainer}>
         <Text style={styles.text}>Weather Summary</Text>
       <Image source={mountians} style={styles.heroImage}/>
+      <Text style={styles.text}>Daily High and Low </Text>
       <View style={styles.tempContainer}>
       <Text style={styles.highTempText}>45{'\u00b0'}F</Text>
       <Text style={styles.tempSlash}>/</Text>

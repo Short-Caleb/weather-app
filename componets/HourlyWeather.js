@@ -4,7 +4,7 @@ import React from 'react'
 export default function HourlyWeather() {
   return (
     <View style={styles.tempContainer}>
-      <Text style={styles.text}>Daily High and Low </Text>
+      
      
     </View>
   )

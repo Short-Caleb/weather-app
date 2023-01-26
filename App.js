@@ -28,9 +28,21 @@ if(!loaded) {
      <WeatherSummary  />
     
     <View style={styles.iconcontainer}>
-     <Icon style={styles.icon} name="wi-night-alt-snow" />
-     <Icon style={styles.icon} name="wi-train" />
+      <View>
+        <Text style={styles.text}>weather for today</Text>
+        <Icon style={styles.icon} name="wi-night-alt-snow" />
+     </View>
+
+     <View>
+        <Text style={styles.text}>Best Travel</Text>
+        <Icon style={styles.icon} name="wi-train" />
+     </View>
+
+     <View>
+      <Text style={styles.text}>Biggest Fear</Text>
      <Icon style={styles.icon} name="wi-alien" />
+     </View>
+
      </View>
      <HourlyWeather />
       
@@ -60,6 +72,8 @@ const styles = StyleSheet.create({
   },
   iconcontainer: {
     flexDirection: 'row',
-    justifyContent: 'space-around'
+    justifyContent: 'space-around',
+    paddingTop: 32,
+    
   }
 });
