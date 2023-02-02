@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ScrollView, Image, SafeAreaView } from 'react-native';
 import { useFonts } from 'expo-font';
 import Icon from './weatherIcon';
+import {FontConstant, ColorConstants, SizeConstants} from './componets/globalStyles';
 
 import HourlyWeather from './componets/HourlyWeather';
 import WeatherDetail from './componets/WeatherDetail';
@@ -63,7 +64,8 @@ const styles = StyleSheet.create({
   },
 
   text: {
-    color: 'white',
+    color: ColorConstants.fontColor,
+
 
   },
   icon: {
