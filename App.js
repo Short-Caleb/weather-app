@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, ScrollView, Image, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, Image, SafeAreaView, FlatList} from 'react-native';
 import { useFonts } from 'expo-font';
 import Icon from './weatherIcon';
 import {FontConstant, ColorConstants, SizeConstants} from './componets/globalStyles';
@@ -7,7 +7,7 @@ import {FontConstant, ColorConstants, SizeConstants} from './componets/globalSty
 import HourlyWeather from './componets/HourlyWeather';
 import WeatherDetail from './componets/WeatherDetail';
 import WeatherSummary from './componets/WeatherSummary';
-
+import data from './data'
 
 
 export default function App() {
@@ -19,13 +19,18 @@ const [loaded] = useFonts(
 if(!loaded) {
   return null;
 }
-
+console.log(data);
 
   return (
     
     <ScrollView style={styles.container}>
-      <SafeAreaView>
-      <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+     
+     <View style={styles.viewContainer}>  
+    <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+    </View>
+    <View style={styles.viewContainer}>
+     <Text style={styles.text}>{data.current.temp}</Text>
+     </View>
      <WeatherSummary  />
     
     <View style={styles.iconcontainer}>
@@ -45,11 +50,13 @@ if(!loaded) {
      </View>
 
      </View>
+     <View>
      <HourlyWeather />
-      
+     </View>
+     <View>
      <WeatherDetail />
-
-     </SafeAreaView>
+     </View>
+    
     </ScrollView>
     
   );
@@ -61,11 +68,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
     //alignItems: 'center',
     //justifyContent: 'center',
+  
   },
 
   text: {
     color: ColorConstants.fontColor,
-
+    fontSize: 14
 
   },
   icon: {
@@ -77,5 +85,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     paddingTop: 32,
     
+  },
+  viewContainer: {
+    marginTop: SizeConstants.margintop
   }
 });

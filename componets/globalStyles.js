@@ -22,7 +22,7 @@ const SizeConstants = {
     paddingRegular: 8,
     paddingLarge: 16,
     borderRadius: 8,
-   
+    margintop: 36,
 }
 
 export {FontConstants, ColorConstants, SizeConstants}

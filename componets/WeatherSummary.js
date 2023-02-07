@@ -1,7 +1,7 @@
 import { StyleSheet, View, Text, ScrollView, Image } from 'react-native'
 import React from 'react';
 import mountians from '../assets/mountians.jpg';
-
+import data from '../data';
 
 export default function WeatherSummary() {
   return (
@@ -10,9 +10,9 @@ export default function WeatherSummary() {
       <Image source={mountians} style={styles.heroImage}/>
       <Text style={styles.text}>Daily High and Low </Text>
       <View style={styles.tempContainer}>
-      <Text style={styles.highTempText}>45{'\u00b0'}F</Text>
-      <Text style={styles.tempSlash}>/</Text>
-      <Text style={styles.lowTempText}>32{'\u00b0'}F</Text>
+      <Text style={styles.highTempText}>{data.daily[0].temp.max} </Text>
+      <Text style={styles.temp}> / </Text>
+      <Text style={styles.lowTempText}>{data.daily[0].temp.min}</Text>
       </View>
     </View>
   )
@@ -49,22 +49,24 @@ const styles = StyleSheet.create({
     borderWidth: 8,
     flexDirection: 'row'
   },
+  temp: {
+    color: 'white',
+    fontsize: 48,
+    fontWeight: 'bold'
+  },
   highTempText: {
     color: 'red',
-    fontSize: 48,
+    fontSize: 36,
     fontWeight: '900',
   },
 
   lowTempText: {
     color: 'lightblue',
-    fontSize: 48,
+    fontSize: 36,
     fontWeight: '300',
     fontStyle: 'italic'
   },
-  tempSlash: {
-    color: 'white',
-    fontsize: 12,
-    fontWeight: 'bold'
-  }
+ 
 });
 
+//{'\u2215'}
