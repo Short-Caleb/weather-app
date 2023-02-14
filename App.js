@@ -8,6 +8,7 @@ import HourlyWeather from './componets/HourlyWeather';
 import WeatherDetail from './componets/WeatherDetail';
 import WeatherSummary from './componets/WeatherSummary';
 import data from './data'
+import { HourlyWeatherMapping } from './componets/HourlyWeatherMapping';
 
 
 export default function App() {
@@ -20,6 +21,9 @@ if(!loaded) {
   return null;
 }
 console.log(data);
+
+
+
 
   return (
     
@@ -55,6 +59,19 @@ console.log(data);
      </View>
      <View>
      <WeatherDetail />
+     <FlatList
+      horizontal
+      data={data.hourly}
+      renderItem={({item}) => <HourlyWeatherMapping hour={item}/> }
+      keyExtractor={(item, index) => index}
+     />
+      {
+/*
+        data.hourly.map((hour) => {
+          return <HourlyWeatherMapping pop={hour.pop} />;
+        })*/
+      }
+      
      </View>
     
     </ScrollView>
@@ -78,7 +95,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     color: 'lightblue',
-    fontSize: 74
+    fontSize: 74,
   },
   iconcontainer: {
     flexDirection: 'row',
