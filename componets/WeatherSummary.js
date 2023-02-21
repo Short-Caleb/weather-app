@@ -10,9 +10,9 @@ export default function WeatherSummary() {
       <Image source={mountians} style={styles.heroImage}/>
       <Text style={styles.text}>Daily High and Low </Text>
       <View style={styles.tempContainer}>
-      <Text style={styles.highTempText}>{data.daily[0].temp.max} </Text>
+      <Text style={styles.highTempText}>{data.daily[0].temp.max} {'\u00b0'}</Text>
       <Text style={styles.temp}> / </Text>
-      <Text style={styles.lowTempText}>{data.daily[0].temp.min}</Text>
+      <Text style={styles.lowTempText}>{data.daily[0].temp.min} {'\u00b0'} </Text>
       </View>
     </View>
   )

@@ -58,13 +58,14 @@ console.log(data);
      <HourlyWeather />
      </View>
      <View>
-     <WeatherDetail />
+     
      <FlatList
       horizontal
       data={data.hourly}
       renderItem={({item}) => <HourlyWeatherMapping hour={item}/> }
       keyExtractor={(item, index) => index}
      />
+     <WeatherDetail />
       {
 /*
         data.hourly.map((hour) => {
