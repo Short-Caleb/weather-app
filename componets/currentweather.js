@@ -9,16 +9,12 @@ export const CurrentWeather = () => {
 
     return(    
         <View style={styles.container}>
-            
-           
+             
             <View style={styles.datacontainer}>
             <Text style={styles.info}>HUNT. WV</Text>
             </View>
             <View style={styles.datacontainer}>
             <Text style={styles.info}>Temp {Math.round(data.current.temp)}</Text>
-            </View>
-            <View style={styles.datacontainer}>
-            <Text style={styles.info}>UVI  { Math.round(data.current.uvi)}</Text>
             </View>
             <View style={styles.datacontainer}>
             <Text style={styles.info}>Feels like {Math.round(data.current.feels_like)}</Text>
