@@ -56,7 +56,7 @@ const iconList = {
     771: ['wi-gale-warning', 'wi-gale-warning'],
     781: ['wi-tornado', 'wi-tornado'],
 
-    800: ['wi-day-sunny', 'wi-night-alt-clear'],
+    800: ['wi-day-sunny', 'wi-night-clear'],
     801: ['wi-day-cloudy', 'wi-night-alt-cloudy'],
     802: ['wi-day-cloudy', 'wi-night-alt-cloudy'],
     803: ['wi-day-cloudy', 'wi-night-alt-cloudy'],

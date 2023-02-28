@@ -9,6 +9,7 @@ import WeatherDetail from './componets/WeatherDetail';
 import WeatherSummary from './componets/WeatherSummary';
 import data from './data'
 import { HourlyWeatherMapping } from './componets/HourlyWeatherMapping';
+import { CurrentWeather } from './componets/currentweather';
 
 
 export default function App() {
@@ -32,9 +33,9 @@ console.log(data);
      <View style={styles.viewContainer}>  
     <Text style={styles.text}>Open up App.js to start working on your app!</Text>
     </View>
-    <View style={styles.viewContainer}>
-     <Text style={styles.text}>{data.current.temp}</Text>
-     </View>
+    
+     <CurrentWeather/>
+     
      <WeatherSummary  />
     
     <View style={styles.iconcontainer}>
