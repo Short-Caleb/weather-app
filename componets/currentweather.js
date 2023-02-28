@@ -12,19 +12,19 @@ export const CurrentWeather = () => {
             
            
             <View style={styles.datacontainer}>
-            <Text style={styles.info}>{data.timezone}</Text>
+            <Text style={styles.info}>HUNT. WV</Text>
             </View>
             <View style={styles.datacontainer}>
-            <Text style={styles.info}>CT {Math.round(data.current.temp)}</Text>
+            <Text style={styles.info}>Temp {Math.round(data.current.temp)}</Text>
             </View>
             <View style={styles.datacontainer}>
-            <Text style={styles.info}>UVI    { Math.round(data.current.uvi)}</Text>
+            <Text style={styles.info}>UVI  { Math.round(data.current.uvi)}</Text>
             </View>
             <View style={styles.datacontainer}>
             <Text style={styles.info}>Feels like {Math.round(data.current.feels_like)}</Text>
             </View>
             <View style={styles.datacontainer}>
-            <Text style={styles.info}>wind{Math.round( data.current.wind_speed)}</Text>
+            <Text style={styles.info}>wind speed {Math.round( data.current.wind_speed)}</Text>
             </View>
 
         </View>
@@ -39,14 +39,14 @@ export const CurrentWeather = () => {
 const styles = StyleSheet.create({
 
     container: { 
-        width: '90%',
-        height: undefined,
-        backgroundColor: 'gray',
-        borderRadius: 10,
-        margin: 6,
-        alignItems: 'center',
         flexDirection: 'row',
-        flexWrap: 'wrap'
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        borderColor: 'darkgray',
+        borderRadius: 5,
+        borderWidth: 3,
+        flexWrap: 'wrap',
+        justifyContent: 'space-evenly'
     },
     info: {
         color: 'lightblue',
@@ -58,8 +58,13 @@ const styles = StyleSheet.create({
         fontSize: 74,
       },
     datacontainer: {
-        flex: 1,
-       
+        width: 160,
+        height: undefined,
+        backgroundColor: 'grey',
+        borderRadius: 25,
+        margin: 6,
+        alignItems: 'center',
+        justifyContent: 'center'
 
     }
 })

@@ -55,6 +55,7 @@ console.log(data);
      </View>
 
      </View>
+     
      <View>
      <HourlyWeather />
      </View>

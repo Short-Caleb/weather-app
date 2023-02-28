@@ -6,25 +6,45 @@ import data from '../data';
 
 export default function WeatherDetail() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Detail</Text>
-      <Image source={gray} style={styles.picture}/>
-      <View style={styles.detailcontainer}>
-        <DetailTile iconName= "wi-thermometer" title="Feels Like" data={data.current.feels_like}/>
+    // <View style={styles.container}>
+    //   <Text style={styles.text}>Detail</Text>
+    //   <Image source={gray} style={styles.picture}/>
+       <View style={styles.detailcontainer}>
+       <View style={styles.tilecontainer}>
+       <DetailTile iconName= "wi-thermometer" title="Feels Like" data={data.current.feels_like}/>
+       </View>
+      
+        <View style={styles.tilecontainer}>
         <DetailTile iconName= "wi-humidity" title="Humidity" data={data.current.humidity}/>
+        </View>
+      
+        <View style={styles.tilecontainer}>
         <DetailTile iconName= "wi-hot" title="UV Index" data={data.current.uvi}/>
+        </View>
+       
+        <View style={styles.tilecontainer}>
         <DetailTile iconName= "wi-horizon-alt" title="Visibility" data={data.current.visibility}/>
+        </View>
+        
+        <View style={styles.tilecontainer}>
         <DetailTile iconName= "wi-flood" title="Dew Point" data={data.current.dew_point}/>
-        <DetailTile iconName= "wi-barometer" title="BM Pressure" data={data.current.pressure}/>
-      </View>
-    </View>
+        </View>
+      
+        <View style={styles.tilecontainer}>
+        <DetailTile iconName= "wi-barometer" title="Barometer" data={data.current.pressure}/>
+        </View>
+       
+      
+       </View>
+    // </View>
   )
 };
 
 const styles = StyleSheet.create({
  
   container: {
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    flex: 1
   },
   text: {
     color: 'white',
@@ -44,8 +64,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    borderColor: 'white',
+    borderColor: 'darkgray',
     borderRadius: 5,
     borderWidth: 3,
+    flexWrap: 'wrap',
+    justifyContent: 'space-evenly'
+},
+tilecontainer: { 
+  width: 150,
+  height: undefined,
+  backgroundColor: 'grey',
+  borderRadius: 50,
+  margin: 6,
+  alignItems: 'center',
+  justifyContent: 'center'
 },
 });

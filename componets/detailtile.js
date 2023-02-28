@@ -7,7 +7,7 @@ export const DetailTile = ({iconName, title, data}) => {
 
 
     return (
-        <View>
+        <View style={styles.container}>
             <Icon style={styles.icon} name={iconName}/>
             <Text style={styles.text}>{title} </Text>
             <Text style={styles.text}>{data} </Text>
@@ -16,7 +16,13 @@ export const DetailTile = ({iconName, title, data}) => {
 }
 
 const styles = StyleSheet.create({
-   
+    container: { 
+      justifyContent: 'center',
+      alignContent: 'center',
+      alignItems: 'center'
+      
+    },
+
     text: {
         color: 'lightblue',
         fontSize: 24,
@@ -24,6 +30,6 @@ const styles = StyleSheet.create({
     },
    icon: {
     color: 'lightblue',
-    fontSize: 24,
+    fontSize: 48,
    }
 });
