@@ -31,7 +31,7 @@ console.log(data);
     <ScrollView style={styles.container}>
      
      <View style={styles.viewContainer}>  
-    <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+    <Text style={styles.headertext}>TODAY'S WEATHER FOR:</Text>
     </View>
     
      <CurrentWeather/>
@@ -61,12 +61,7 @@ console.log(data);
      </View>
      <View>
      
-     <FlatList
-      horizontal
-      data={data.hourly}
-      renderItem={({item}) => <HourlyWeatherMapping hour={item}/> }
-      keyExtractor={(item, index) => index}
-     />
+     
      <WeatherDetail />
       {
 /*
@@ -108,5 +103,10 @@ const styles = StyleSheet.create({
   },
   viewContainer: {
     marginTop: SizeConstants.margintop
+  },
+  headertext: {
+    color: 'lightblue',
+    fontSize: 36,
+    fontWeight: 'bold'
   }
 });

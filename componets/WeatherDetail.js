@@ -8,7 +8,7 @@ export default function WeatherDetail() {
   return (
     // <View style={styles.container}>
     //   <Text style={styles.text}>Detail</Text>
-    //   <Image source={gray} style={styles.picture}/>
+    //   
        <View style={styles.detailcontainer}>
        <View style={styles.tilecontainer}>
        <DetailTile iconName= "wi-thermometer" title="Feels Like" data={data.current.feels_like}/>
@@ -34,7 +34,7 @@ export default function WeatherDetail() {
         <DetailTile iconName= "wi-barometer" title="Barometer" data={data.current.pressure}/>
         </View>
        
-      
+        <Image source={gray} style={styles.picture}/>
        </View>
     // </View>
   )

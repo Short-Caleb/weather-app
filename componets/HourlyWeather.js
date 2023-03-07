@@ -1,10 +1,18 @@
-import { StyleSheet, Text, View, ScrollView } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, FlatList } from 'react-native'
 import React from 'react'
+import data from '../data';
+import { HourlyWeatherMapping } from './HourlyWeatherMapping';
 
 export default function HourlyWeather() {
   return (
     <View style={styles.tempContainer}>
-      
+      <Text style={styles.text}>HOURLY WEATHER:</Text>
+      <FlatList
+      horizontal
+      data={data.hourly}
+      renderItem={({item}) => <HourlyWeatherMapping hour={item}/> }
+      keyExtractor={(item, index) => index}
+     />
      
     </View>
   )
@@ -13,8 +21,8 @@ export default function HourlyWeather() {
 const styles = StyleSheet.create({
  
   text: {
-    color: 'white',
-    fontSize: 24,
+    color: 'lightblue',
+    fontSize: 36,
     fontWeight: '800',
     marginTop: 32,
     marginBottom: 12,

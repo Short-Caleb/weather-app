@@ -14,13 +14,13 @@ export const CurrentWeather = () => {
             <Text style={styles.info}>HUNT. WV</Text>
             </View>
             <View style={styles.datacontainer}>
-            <Text style={styles.info}>Temp {Math.round(data.current.temp)}</Text>
+            <Text style={styles.info}>Temp {Math.round(data.current.temp)} {'\u00b0'}F </Text>
             </View>
             <View style={styles.datacontainer}>
-            <Text style={styles.info}>Feels like {Math.round(data.current.feels_like)}</Text>
+            <Text style={styles.info}>Feels like {'\n'} {Math.round(data.current.feels_like)} {'\u00b0'}F</Text>
             </View>
             <View style={styles.datacontainer}>
-            <Text style={styles.info}>wind speed {Math.round( data.current.wind_speed)}</Text>
+            <Text style={styles.info}>Wind speed {'\n'} {Math.round( data.current.wind_speed)} mph</Text>
             </View>
 
         </View>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'flex-start',
         borderColor: 'darkgray',
-        borderRadius: 5,
+        borderRadius: 25,
         borderWidth: 3,
         flexWrap: 'wrap',
         justifyContent: 'space-evenly'
