@@ -10,6 +10,7 @@ import WeatherSummary from './componets/WeatherSummary';
 import data from './data'
 import { HourlyWeatherMapping } from './componets/HourlyWeatherMapping';
 import { CurrentWeather } from './componets/currentweather';
+import { WeatherDaily } from './componets/WeatherDaily';
 
 
 export default function App() {
@@ -59,6 +60,9 @@ console.log(data);
      <View>
      <HourlyWeather />
      </View>
+
+    <WeatherDaily/>
+
      <View>
      
      
