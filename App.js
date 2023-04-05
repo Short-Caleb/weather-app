@@ -1,8 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
+import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, SafeAreaView, FlatList} from 'react-native';
 import { useFonts } from 'expo-font';
 import Icon from './weatherIcon';
 import {FontConstant, ColorConstants, SizeConstants} from './componets/globalStyles';
+import axios from 'axios';
+
+import {Weather_API} from '@env'
 
 import HourlyWeather from './componets/HourlyWeather';
 import WeatherDetail from './componets/WeatherDetail';
@@ -11,9 +15,24 @@ import data from './data'
 import { HourlyWeatherMapping } from './componets/HourlyWeatherMapping';
 import { CurrentWeather } from './componets/currentweather';
 import { WeatherDaily } from './componets/WeatherDaily';
+import { SunriseAndSet } from './componets/SunriseAndSet';
+import { Moonriseandset } from './componets/Moonriseandset';
+
 
 
 export default function App() {
+
+const [data, setData] = useState(null)
+
+useEffect(() => {
+  axios.get('https://api.openweathermap.org/data/3.0/onecall?lat=38.419&lon=-82.445&units=imperial&appid='+Weather_API)
+  .then((response) => {
+    console.log(response);
+    setData(response.data);
+  }).catch((error) => {
+    console.log(error);
+  });
+}, [])
 
 const [loaded] = useFonts(
   { icomoon: require('./assets/fonts/icomoon.ttf')}
@@ -22,9 +41,11 @@ const [loaded] = useFonts(
 if(!loaded) {
   return null;
 }
-console.log(data);
+//console.log(data);
 
-
+if(!data) {
+  return null;
+}
 
 
   return (
@@ -35,9 +56,13 @@ console.log(data);
     <Text style={styles.headertext}>TODAY'S WEATHER FOR:</Text>
     </View>
     
+    <SunriseAndSet/>
+
+    <Moonriseandset/>
+    
      <CurrentWeather/>
      
-     <WeatherSummary  />
+     <WeatherSummary data={data} />
     
     <View style={styles.iconcontainer}>
       <View>

@@ -77,6 +77,8 @@ tilecontainer: {
   borderRadius: 50,
   margin: 6,
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  borderColor: 'white',
+  borderWidth: 1,
 },
 });

@@ -1,9 +1,9 @@
 import { StyleSheet, View, Text, ScrollView, Image } from 'react-native'
 import React from 'react';
 import mountians from '../assets/mountians.jpg';
-import data from '../data';
+//import data from '../data';
 
-export default function WeatherSummary() {
+export default function WeatherSummary({data}) {
 
   let windDirection = "";
   const deg = data.current.wind_deg

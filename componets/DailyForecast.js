@@ -3,6 +3,7 @@ import data from '../data'
 import {View, StyleSheet, Text, } from 'react-native'
 import Icon from '../weatherIcon'; 
 import { iconList } from '../weatherhelper';
+import { Moonriseandset } from './Moonriseandset';
 
 export const DailyForecast = ({day}) => {
   return (
@@ -13,6 +14,7 @@ export const DailyForecast = ({day}) => {
         <Text style={styles.info} > Low {'\n'} {Math.round(day.temp.min)} {'\u00b0'}F</Text>
         <Text style={styles.info} > pop {'\n'} {day.pop*100}% </Text>
         <Text style={styles.info} > Hum {'\n'} {Math.round(day.humidity)}% </Text>
+        <Moonriseandset/>
     </View>
   )
 }
