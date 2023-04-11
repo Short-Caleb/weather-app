@@ -4,7 +4,7 @@ import gray from '../assets/grayfield.jpg'
 import { DetailTile } from './detailtile';
 import data from '../data';
 
-export default function WeatherDetail() {
+export default function WeatherDetail({data}) {
   return (
     // <View style={styles.container}>
     //   <Text style={styles.text}>Detail</Text>

@@ -27,7 +27,7 @@ const [data, setData] = useState(null)
 useEffect(() => {
   axios.get('https://api.openweathermap.org/data/3.0/onecall?lat=38.419&lon=-82.445&units=imperial&appid='+Weather_API)
   .then((response) => {
-    console.log(response);
+    console.log(response.data);
     setData(response.data);
   }).catch((error) => {
     console.log(error);
@@ -55,12 +55,12 @@ if(!data) {
      <View style={styles.viewContainer}>  
     <Text style={styles.headertext}>TODAY'S WEATHER FOR:</Text>
     </View>
-    
-    <SunriseAndSet/>
+  
+    <SunriseAndSet data={data}/>
 
-    <Moonriseandset/>
+    <Moonriseandset  />
     
-     <CurrentWeather/>
+     <CurrentWeather data={data}/>
      
      <WeatherSummary data={data} />
     
@@ -83,15 +83,15 @@ if(!data) {
      </View>
      
      <View>
-     <HourlyWeather />
+     <HourlyWeather data={data}/>
      </View>
 
-    <WeatherDaily/>
+    <WeatherDaily data={data}/>
 
      <View>
      
      
-     <WeatherDetail />
+     <WeatherDetail data={data}/>
       {
 /*
         data.hourly.map((hour) => {

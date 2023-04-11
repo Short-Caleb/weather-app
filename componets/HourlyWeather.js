@@ -3,7 +3,7 @@ import React from 'react'
 import data from '../data';
 import { HourlyWeatherMapping } from './HourlyWeatherMapping';
 
-export default function HourlyWeather() {
+export default function HourlyWeather({data}) {
   return (
     <View style={styles.tempContainer}>
       <Text style={styles.text}>HOURLY WEATHER:</Text>

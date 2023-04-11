@@ -5,7 +5,7 @@ import data from '../data'
 import { DailyForecast } from './DailyForecast'
 
 
-export const WeatherDaily = () => {
+export const WeatherDaily = ({data}) => {
   return (
 
     <View>

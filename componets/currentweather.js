@@ -4,7 +4,7 @@ import Icon from '../weatherIcon';
 import { iconList } from '../weatherhelper';
 import data from '../data';
 
-export const CurrentWeather = () => {
+export const CurrentWeather = ({data}) => {
 
 
     return(    

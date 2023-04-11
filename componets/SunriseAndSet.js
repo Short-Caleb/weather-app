@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text, StyleSheet } from 'react-native';
 import data from '../data';
 
-export const SunriseAndSet = () => {
+export const SunriseAndSet = ({data}) => {
 
 
     const sunriseTime = new Date(data.daily[0].sunrise * 1000).toLocaleTimeString();
