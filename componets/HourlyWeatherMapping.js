@@ -60,8 +60,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderColor: 'white',
         borderWidth: 1,
-
+      
     },
+
     info: {
         color: 'lightblue',
         fontSize: 24,

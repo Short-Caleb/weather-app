@@ -14,7 +14,6 @@ export const DailyForecast = ({day}) => {
         <Text style={styles.info} > Low {'\n'} {Math.round(day.temp.min)} {'\u00b0'}F</Text>
         <Text style={styles.info} > pop {'\n'} {day.pop*100}% </Text>
         <Text style={styles.info} > Hum {'\n'} {Math.round(day.humidity)}% </Text>
-        <Moonriseandset/>
     </View>
   )
 }

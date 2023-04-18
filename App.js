@@ -11,7 +11,7 @@ import {Weather_API} from '@env'
 import HourlyWeather from './componets/HourlyWeather';
 import WeatherDetail from './componets/WeatherDetail';
 import WeatherSummary from './componets/WeatherSummary';
-import data from './data'
+//import data from './data'
 import { HourlyWeatherMapping } from './componets/HourlyWeatherMapping';
 import { CurrentWeather } from './componets/currentweather';
 import { WeatherDaily } from './componets/WeatherDaily';
@@ -53,15 +53,15 @@ if(!data) {
     <ScrollView style={styles.container}>
      
      <View style={styles.viewContainer}>  
-    <Text style={styles.headertext}>TODAY'S WEATHER FOR:</Text>
+    <Text style={styles.headertext}>TODAY'S WEATHER:</Text>
     </View>
-  
+    <CurrentWeather data={data}/>
+     
     <SunriseAndSet data={data}/>
 
-    <Moonriseandset  />
+    <Moonriseandset data={data}/>
     
-     <CurrentWeather data={data}/>
-     
+    
      <WeatherSummary data={data} />
     
     <View style={styles.iconcontainer}>
@@ -109,7 +109,7 @@ if(!data) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
+    backgroundColor: 'black',
     //alignItems: 'center',
     //justifyContent: 'center',
   
