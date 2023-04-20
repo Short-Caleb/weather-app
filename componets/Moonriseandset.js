@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, Text,  } from 'react-native';
 import data from '../data';
 import Icon from '../weatherIcon'; 
-import { moonPhaseList } from '../moonPhaseHelper';
+import { moonPhaseList, moonPhaseName } from '../moonPhaseHelper';
 import moment from 'moment';
 export const Moonriseandset = ({data}) => {
   
@@ -27,7 +27,7 @@ console.log('moon weather')
         </View>
     </View>
      <View style={styles.mooncontainer}>
-     <Text style={styles.text}>Moon Phase:</Text>
+     <Text style={styles.text}>{moonPhaseName[moonphase]}:</Text>
      <Icon style={styles.icon} name={moonPhaseList[moonphase]} />
      </View>
      </>

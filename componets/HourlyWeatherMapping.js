@@ -32,7 +32,10 @@ if(hours === 0 ) hours = 12
     <View style={styles.container}>
         <Icon style={styles.icon} name={iconList[hour.weather[0].id][index]} />
         <Text style={styles.info}>
-           cor-{hour.pop}%
+          Precip
+        </Text>
+        <Text style={styles.info}>
+           {hour.pop * 100}%
         </Text>
         <Text style={styles.info}>
             {Math.round(hour.temp)} {'\u00b0'}F
@@ -53,7 +56,7 @@ const styles = StyleSheet.create({
 
     container: { 
         width: 95,
-        height: 225,
+        height: 255,
         backgroundColor: 'gray',
         borderRadius: 10,
         margin: 6,

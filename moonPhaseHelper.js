@@ -27,7 +27,40 @@ const moonPhaseList = [
  'wi-moon-alt-waning-crescent-4',
  'wi-moon-alt-waning-crescent-5',
  'wi-moon-alt-waning-crescent-6',
+ 'wi-moon-alt-new',
 ];
 
+const moonPhaseName = [
+    'New Moon ',
+    'Waxing Crescent',
+    'Waxing Crescent',
+    'Waxing Crescent',
+    'Waxing Crescent',
+    'Waxing Crescent',
+    'Waxing Crescent',
+    'First Quarter Moon',
+    'Waxing Gibbous',
+    'Waxing Gibbous',
+    'Waxing Gibbous',
+    'Waxing Gibbous',
+    'Waxing Gibbous',
+    'Waxing Gibbous',
+    'Full Moon',
+    'Waning Gibbous',
+    'Waning Gibbous',
+    'Waning Gibbous',
+    'Waning Gibbous',
+    'Waning Gibbous',
+    'Waning Gibbous',
+    'Third Quarter Moon',
+    'Waning Crescent',
+    'Waning Crescent',
+    'Waning Crescent',
+    'Waning Crescent',
+    'Waning Crescent',
+    'Waning Crescent',
+    'New Moon',
+   ];
 
-export {moonPhaseList}
+
+export {moonPhaseList, moonPhaseName}
