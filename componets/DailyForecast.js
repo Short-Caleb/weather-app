@@ -4,8 +4,11 @@ import {View, StyleSheet, Text, } from 'react-native'
 import Icon from '../weatherIcon'; 
 import { iconList } from '../weatherhelper';
 import { Moonriseandset } from './Moonriseandset';
-
+import { moonPhaseList } from '../moonPhaseHelper';
 export const DailyForecast = ({day}) => {
+
+  let moonphase = day.moon_phase * 28;
+  moonphase = Math.round(moonphase)
   return (
     <View style={styles.container}>
         <Icon style={styles.icon} name={iconList[day.weather[0].id][0]} />
@@ -14,6 +17,8 @@ export const DailyForecast = ({day}) => {
         <Text style={styles.info} > Low {'\n'} {Math.round(day.temp.min)} {'\u00b0'}F</Text>
         <Text style={styles.info} > pop {'\n'} {day.pop*100}% </Text>
         <Text style={styles.info} > Hum {'\n'} {Math.round(day.humidity)}% </Text>
+        <Text style={styles.info}>Phase: </Text>
+        <Icon style={styles.icon} name={moonPhaseList[moonphase]} />
     </View>
   )
 }

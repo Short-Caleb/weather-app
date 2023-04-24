@@ -17,7 +17,7 @@ import { CurrentWeather } from './componets/currentweather';
 import { WeatherDaily } from './componets/WeatherDaily';
 import { SunriseAndSet } from './componets/SunriseAndSet';
 import { Moonriseandset } from './componets/Moonriseandset';
-
+import Radar from './componets/RadarGif'
 
 
 export default function App() {
@@ -56,31 +56,15 @@ if(!data) {
     <Text style={styles.headertext}>TODAY'S WEATHER:</Text>
     </View>
     <CurrentWeather data={data}/>
-     
+
+    <Radar/> 
+
     <SunriseAndSet data={data}/>
 
     <Moonriseandset data={data}/>
     
     
      <WeatherSummary data={data} />
-    
-    <View style={styles.iconcontainer}>
-      <View>
-        <Text style={styles.text}>weather for today</Text>
-        <Icon style={styles.icon} name="wi-night-alt-snow" />
-     </View>
-
-     <View>
-        <Text style={styles.text}>Best Travel</Text>
-        <Icon style={styles.icon} name="wi-train" />
-     </View>
-
-     <View>
-      <Text style={styles.text}>Biggest Fear</Text>
-     <Icon style={styles.icon} name="wi-alien" />
-     </View>
-
-     </View>
      
      <View>
      <HourlyWeather data={data}/>
